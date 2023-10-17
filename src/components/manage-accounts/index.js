@@ -133,19 +133,19 @@ export default function ManageAccounts() {
 
     return <div className="min-h-screen flex justify-center flex-col items-center relative">
         <div className="flex justify-center flex-col items-center">
-            <h1 className="text-white font-bold text-[54px] my-[36px]">Who's Watching</h1>
-            <ul className="flex p-0 my-[25px]">
+            <h1 className="text-white text-center font-bold text-[50px] my-[36px]">Who's Watching</h1>
+            <ul className="flex gap-2 p-0 my-[25px]">
               {
                 accounts && accounts.length ?
                 accounts.map((item) => (
-                  <li className="max-w-[200px] min-w-[200px] w-[155px] cursor-pointer flex flex-col items-center gap-3" key={item._id}
+                  <li className="max-w-[100px] min-w-[90px] w-[100px] cursor-pointer flex flex-col items-center gap-3" key={item._id}
                     onClick={showDeleteIcon ? null : () => setShowPinContainer({show: true, account: item})}
                   >
                   <div className="relative">
                     <img 
                     src="https://occ-0-2611-3663.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABfNXUMVXGhnCZwPI1SghnGpmUgqS_J-owMff-jig42xPF7vozQS1ge5xTgPTzH7ttfNYQXnsYs4vrMBaadh4E6RTJMVepojWqOXx.png?r=1d4"
                     alt="Account"
-                    className="max-w-[200px] rounded min-w-[84px] max-h-[200px] min-h-[84px] object-cover w-[155px] h-[155px]"
+                    className="max-w-[100px] rounded min-w-[90px] max-h-[120px] min-h-[90px] object-cover w-[100px] h-[120px]"
                     />
                     {
                       showDeleteIcon ? 
@@ -183,7 +183,7 @@ export default function ManageAccounts() {
 
                 {
                   accounts && accounts.length < 4 ? 
-                  <li onClick={() => setShowAccountForm(!showAccountForm)} className="border text-black bg-[#e5b109] font-bold text-lg border-black max-w-[200px] rounded min-w-[84px] max-h-[200px] min-h-[84px] w-[155px] h-[155px] cursor-pointer flex justify-center items-center">
+                  <li onClick={() => setShowAccountForm(!showAccountForm)} className="border text-black bg-[#e5b109] font-bold text-lg border-black max-w-[100px] rounded min-w-[90px] max-h-[120px] min-h-[90px] w-[100px] h-[120px] cursor-pointer text-center flex justify-center items-center">
                     Add Account
                   </li>
                   : null
